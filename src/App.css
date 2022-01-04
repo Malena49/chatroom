@@ -1,0 +1,192 @@
+
+body{
+    background-color: #477dc7;
+    font-family: "Courier New";
+}
+#conteneur{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2%;
+    background-color: rgb(186, 228, 245);
+    position: relative;
+    overflow-x: hidden;
+border-radius: 20px;
+}
+    
+
+    h1{
+        font-size: 2em;
+        background-color: #5E2FCA;
+        color: white;
+        text-align: center;
+        padding: 2%;
+    }
+#chatroom{
+    height: 600px;
+ overflow-y: auto;
+
+
+}
+#messageinput{
+    width: 100%;
+   
+    padding:2% 0;
+    background-color: white;
+
+}
+#messageinput input{
+    width: 90%;
+    border: none;
+    padding:2% 0;
+margin: 0;
+
+
+}
+
+i{
+    color: rgb(84, 153, 185);
+    font-size: 2em;
+
+}
+#messageinput button{
+    width: 10%;
+border: none;    
+margin: 0;
+padding:0;
+background-color: white;
+cursor: pointer;
+}
+#you p{
+   text-align: right;
+}
+
+.message p{
+    padding: 6% 5% 2%;
+
+}
+#time{
+    font-size: 0.7em;
+    margin-top: 1%;
+    color: rgb(194, 194, 194);
+}
+.message__content{
+    position: relative;
+margin: 2%;
+    max-width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    font-size: 1.25em;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+
+}
+#you>div{
+  margin-left: 10%;
+  background-color: rgb(255, 255, 255);
+  
+}
+#other>div{
+    margin-right: 10%;
+    color: white;
+    background-color: #477dc7;
+}
+.message__content::before {
+
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    right: 1.5em;
+    border: 0.75rem solid transparent;
+    border-top: none;
+    
+    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+  }
+#you>div::before {
+    right: 1.5em;
+    border-bottom-color: rgb(255, 255, 255);
+}
+#other>div::before {
+    left: 1.5em;
+    border-bottom-color: #477dc7;
+}
+.inscription{
+    display: flex;
+    position: fixed;
+    padding-top: 2%;
+    z-index: 1000;
+    transition: width 0.2s;
+}
+
+#fermeture{
+width:0;
+}
+#ouverture{
+    width:40%;
+   
+}
+.inscription form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 3%;
+}
+.inscription form input{
+    padding: 5%;
+    margin-bottom: 2%;
+    border: none;
+    border-radius: 5px;
+}
+.inscription form input[type=submit]{
+    background-color: rgb(94, 47, 202);
+    padding: 3%;
+    color: white;
+    cursor: pointer;
+}
+.settings-button{
+    background-color: transparent;
+    font-size: 2.5em;
+  border: none;
+    color: rgb(94, 47, 202);
+    font-weight: bold;
+    transition: transform 0.5s ,width 0.5s, height 0.5s, font-size 0.5s;
+    cursor: pointer;
+    margin-left: 3%;
+    align-self: flex-start;
+}
+#ouverture-button{
+    transform: rotate(45deg);
+}
+#fermeture-button{
+    transform: rotate(0deg);
+    opacity: 0.5;
+    
+}
+.settings-button:hover{
+    font-size: 3em;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5E2FCA;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(158, 211, 218);
+    border-radius: 10px;
+
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #5E2FCA;
+    border-radius: 10px;
+    
+  }
