@@ -29,7 +29,7 @@ function Form({ socket }) {
       }
       await socket.emit("send_message", messageData);
       setmessageList((list) => [...list, messageData])
-    }else if (roomid == "" || username == ""){
+    }else if (roomid === "" || username === ""){
       alert("Please join a room first!")
     }
      else {
